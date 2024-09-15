@@ -13,7 +13,34 @@ body {
 }
 
 /* Media Query for Mobile Devices */
-@media (max-width: 768px) {
+
+.course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.course-card {
+    background: #ffffff; /* Set background to white */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(50% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.advantage-item {
+    background: #f9f9f9; /* Slightly lighter background */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media (max-width: 580px) {
     .container {
         width: 100%;
     }
@@ -25,6 +52,30 @@ body {
 
     .google-map iframe {
         height: 300px; /* Adjust height for better fit on smaller screens */
+    }
+    .advantage-item {
+        width: 100%;
+        
+        
+    }
+    /* Advantages Section for Mobile */
+    .advantages-content {
+     /* Stack items vertically */
+        gap: 20px; /* Space between items */
+        margin: 0;
+    }
+
+   
+
+    /* Courses Section for Mobile */
+    .course-cards {
+        flex-direction: column; /* Stack items vertically */
+        gap: 20px; /* Space between items */
+    }
+
+    .course-card {
+        width: 100%; /* Full width for each item */
+        box-sizing: border-box; /* Ensure padding does not affect width */
     }
 }
 
@@ -118,6 +169,7 @@ nav {
     font-weight: bold;
     font-size: 18px;
 }
+
 @media (max-width: 768px) {
     .nav-links {
         display: none; /* Hide desktop menu */
@@ -127,7 +179,6 @@ nav {
         display: block; /* Show hamburger menu */
     }
 }
-
 
 .mobile-menu.open {
     display: block;
@@ -165,16 +216,7 @@ nav {
     justify-content: center;
 }
 
-.advantage-item {
-    background: #f9f9f9; /* Slightly lighter background */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    width: calc(33.333% - 20px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+
 
 .advantage-item:hover {
     transform: translateY(-10px);
@@ -192,22 +234,6 @@ nav {
     margin-bottom: 30px;
 }
 
-.course-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.course-card {
-    background: #ffffff; /* Set background to white */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    width: calc(50% - 20px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 .course-card:hover {
     transform: translateY(-10px);
@@ -436,4 +462,3 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
